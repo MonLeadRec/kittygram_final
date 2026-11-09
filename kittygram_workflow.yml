@@ -1,0 +1,5 @@
+# Основной workflow проекта хранится в файле .github/workflows/main.yml.
+# Он запускается при пуше в любую ветку: прогоняет ruff и тесты бэкенда,
+# собирает фронтенд, а при пуше в main/master — собирает и публикует
+# образы kittygram_backend, kittygram_frontend, kittygram_gateway на
+# Docker Hub под учёткой из секретов DOCKER_USERNAME / DOCKER_PASSWORD.
