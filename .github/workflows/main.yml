@@ -74,9 +74,11 @@ jobs:
           npm ci
 
       - name: Build frontend
+        env:
+          CI: 'false'
         run: |
           cd frontend
-          CI=true npm run build
+          npm run build
 
   build_and_push_images:
     name: Build and push images to Docker Hub
